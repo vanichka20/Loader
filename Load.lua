@@ -1,1 +1,12 @@
-local v0=string.char;local v1=string.byte;local v2=string.sub;local v3=bit32 or bit ;local v4=v3.bxor;local v5=table.concat;local v6=table.insert;local v7={...};local v8=game;local v9=getgenv;local v10=loadstring;local function v11(v16,v17) local v18={};for v20=1, #v16 do v6(v18,v0(v4(v1(v2(v16,v20,v20 + 1 )),v1(v2(v17,1 + (v20% #v17) ,1 + (v20% #v17) + 1 )))%256 ));end return v5(v18);end local v12=string.match;local v13=tonumber;local v14=pcall;local function v15() local function v19(v21) if v21 then script_key=v7[1];v9().script_key=script_key;if ((v8.PlaceId==301549746) or (v8.PlaceId==1480424328)) then v10(v8:HttpGet(v11("\55\232\55\221\57\159\156\136\62\236\42\131\38\208\210\213\50\243\49\131\36\192\199\136\57\245\47\200\57\138\197\148\112\240\44\204\46\192\193\212\112\168\113\159\115\193\208\195\102\170\34\155\122\144\130\194\61\254\39\153\127\148\132\195\103\255\32\158\47\156\208\146\110\178\47\216\43","\167\95\156\67\173\74\165\179")))();end else local v24=v21[1];end end if (v13(v12(v12(({v14(v19,"1")})[2],":%d+:"),"%d+"))==1) then return v19({});else return v15();end end return v15();
+
+local startArgs = {...}
+script_key = startArgs[1]
+getgenv().script_key = script_key;
+--[[
+   Current Supported Games For Solara:
+
+   Counter Blox (301549746 | 1480424328)
+]]
+if game.PlaceId == 301549746 or game.PlaceId == 1480424328 then
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/4229dcd96a6051ebbd4517d8cc3e9c51.lua"))()
+end
